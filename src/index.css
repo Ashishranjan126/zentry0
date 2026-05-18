@@ -146,6 +146,34 @@ body {
   .contact-clip-path-2 {
     clip-path: polygon(29% 15%, 85% 30%, 50% 100%, 10% 64%);
   }
+
+  .api-card {
+    @apply rounded-3xl border border-slate-200 bg-white p-6 shadow-sm;
+  }
+
+  .api-empty {
+    @apply flex flex-col items-center justify-center gap-6 rounded-[2rem] border border-dashed border-slate-300 bg-slate-100/90 p-10 text-center;
+  }
+
+  .api-spinner {
+    @apply inline-flex h-14 w-14 animate-spin rounded-full border-4 border-slate-200 border-t-violet-500;
+  }
+
+  .toast-panel {
+    @apply fixed right-5 top-5 z-50 flex flex-col gap-3;
+  }
+
+  .toast-item {
+    @apply w-full max-w-xs rounded-3xl border px-4 py-4 shadow-xl shadow-slate-900/10;
+  }
+
+  .toast-success {
+    @apply border-emerald-200 bg-emerald-50 text-emerald-900;
+  }
+
+  .toast-error {
+    @apply border-rose-200 bg-rose-50 text-rose-900;
+  }
 }
 
 .indicator-line {
