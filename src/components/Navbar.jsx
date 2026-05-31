@@ -16,6 +16,13 @@ const Navbar = () => {
 
     const { y: currentScrollY } = useWindowScroll();
 
+    const handleSignInClick = () => {
+      const authSection = document.getElementById('auth');
+      if (authSection) {
+        authSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
     useEffect(() => {
         if (currentScrollY === 0) {
             setIsNavVisible(true);
@@ -73,6 +80,12 @@ const Navbar = () => {
                         </a>
                     ))}
                 </div>
+                <button 
+                    onClick={handleSignInClick}
+                    className='ml-10 px-6 py-2 rounded-full bg-violet-600 hover:bg-violet-700 text-white text-sm font-semibold transition transform hover:scale-105 active:scale-95'
+                >
+                    Sign In
+                </button>
                 <button className='ml-10 flex items-center space-x-0.5' onClick={toggleAudioIndicator}>
                     <audio src="/audio/loop.mp3" ref={audioElementRef} className='hidden' loop />
                     {[1,2,3,4].map((bar) => (
